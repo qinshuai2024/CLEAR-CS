@@ -1,0 +1,29 @@
+# title = 
+# "params for generating doc embeddings. \
+# The following things should be provided:
+# - tokenized passage corpus
+# - a pretrained passage encoder"
+
+
+# [Model]
+model_type = "ANCE"
+pretrained_passage_encoder = "3ricL/ad-hoc-ance-msmarco"   # passage encoder!!!
+max_seq_length = 384
+
+# [Gen]
+per_gpu_eval_batch_size = 512
+local_rank = -1 # Not use distributed training
+disable_tqdm = false
+n_gpu = 1
+
+# [Input Data]
+# Examples:
+# tokenized_passage_collection_dir_path = "data/topiocqa/tokenized"
+# tokenized_passage_collection_dir_path = "data/qrecc/tokenized"
+tokenized_passage_collection_dir_path = "data/cast/tokenized"
+
+# [Output]
+# Examples:
+# data_output_path = "data/topiocqa/embeddings"
+# data_output_path = "data/qrecc/embeddings"
+data_output_path = "data/cast/embeddings"

@@ -1,0 +1,19 @@
+# Data files
+./data
+
+# Experiment outputs
+experiments/*
+!experiments/.gitkeep
+
+# Environment
+venv/
+.env
+*.pyc
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
+
+# Test files
+./src/test
